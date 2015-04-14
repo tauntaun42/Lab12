@@ -50,18 +50,12 @@ int main()
       cd->displayCD();
    }
    delete bst_iter;
-
-   //DO THIS
-   //display the height of the binary search tree (not minimum height)
-   //display whether the binary search tree is balanced (should not be balanced)
-
-
-
-
-
-
-
-
+   
+   cout << "\nHeight: " << bst->getHeight() << endl;
+   cout << "\nBalanced? ";
+   if (bst->isBalanced) cout << "Yes" << endl;
+   else cout << "No" << endl;
+   
    //create a minimum height binary search tree
    BinarySearchTree<CD>* min_bst = bst->minimize();
    bst_iter = min_bst->iterator();
@@ -78,7 +72,10 @@ int main()
    //DO THIS
    //display the height of the binary search tree (should be minimum height)
    //display whether the binary search tree is balanced (should be balanced)
-
+	cout << "\nHeight: " << bst->getHeight() << endl;
+    cout << "\nBalanced? ";
+    if (bst->isBalanced) cout << "Yes" << endl;
+    else cout << "No" << endl;
 
 
 
@@ -104,7 +101,10 @@ int main()
    //DO THIS
    //display the height of the complete binary search tree (should be minimum height)
    //display whether the binary search tree is balanced (should be balanced)
-
+   cout << "\nHeight: " << bst->getHeight() << endl;
+   cout << "\nBalanced? ";
+   if (bst->isBalanced) cout << "Yes" << endl;
+   else cout << "No" << endl;
 
 
 
