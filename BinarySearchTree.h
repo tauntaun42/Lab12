@@ -68,34 +68,50 @@ class BinarySearchTree : public Drawable
 template < class T >
 int BinarySearchTree<T>::getHeight()
 {
-   //DO THIS
-
+   return getHeight(root);
 }
 
 template < class T >
 int BinarySearchTree<T>::getHeight(TreeNode<T>* tNode)
 {
-   //DO THIS
-
-
-
+	if (tNode == NULL)
+		return 0;
+	
+	int leftHeight = getHeight(tNode->getLeft());
+	int rightHeight = getHeight(tNode->getRight());
+	
+	if (leftHeight
 }
 
 template < class T >
 bool BinarySearchTree<T>::isBalanced()
 {
-   //DO THIS
-
+	return isBalanced(root);
 }
 
 template < class T >
 bool BinarySearchTree<T>::isBalanced(TreeNode<T>* tNode)
 {
    //DO THIS
-
-
-
-
+   TreeNode<T>* leftSub = tNode->getLeft();
+   TreeNode<T>* rightSub = tNode->getRight();
+   
+   //finished, balanced
+   if (leftSub == NULL && rightSub == NULL)
+   {
+	   return true;
+   }
+   
+   //still balanced, keep going
+   if (getHeight(leftSub) == getHeight(rightSub))
+   {
+	   return isBalanced(leftSub);
+	   return isBalanced(rightSub);
+   }
+   
+   //if not balanced
+   else
+	   return false;
 }
 
 template < class T >
@@ -114,7 +130,7 @@ template < class T >
 void BinarySearchTree<T>::minimize(T** items, int first, int last)
 {
    //DO THIS (recursive minimize method)
-
+   int mid = first + ((last-first)/2);
 
 
 
