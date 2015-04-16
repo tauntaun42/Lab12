@@ -32,7 +32,18 @@ int main(int argc, char** argv)
    BinarySearchTree<CD>* min = bst->minimize();
    delete bst;
    bst = min;
-
+	
+	if (min->isBalanced()) 
+	{
+		cout << "YESZ";
+	}
+	else 
+	{
+		cout << "NOZ";
+	}
+	
+	cout << "\n" << min->getHeight();
+	
    Gtk::Main kit(argc, argv);
 
    Gtk::Window win;
